@@ -1,5 +1,6 @@
 'use client'
 import {useState} from "react";
+//@ts-ignore
 import axios, * as other from "axios"
 
 
