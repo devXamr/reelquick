@@ -110,7 +110,7 @@ export default function Home() {
             </div>}
 
 
-            <div className='text-xs text-gray-500 absolute bottom-2 w-[25%] mx-auto inset-x-0'>This tool is for personal and educational use only.
+            <div className='text-xs text-gray-500 absolute bottom-2 lg:w-[25%] w-[95%] mx-auto inset-x-0'>This tool is for personal and educational use only.
                 We do not host any videos, and we do not own the content.
                 All rights belong to the original creators on Instagram™.</div>
 
