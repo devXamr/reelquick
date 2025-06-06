@@ -13,6 +13,7 @@ export default function Home() {
     const [downloadUrl, setDownloadUrl] = useState('')
     const [submitted, setSubmitted] = useState(false)
     const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     async function downloadReel() {
         try {
@@ -40,6 +41,7 @@ export default function Home() {
         }
 
         setError(false)
+        setLoading(true)
 
         const options = {
             method: 'GET',
@@ -66,6 +68,7 @@ export default function Home() {
         }
        setSubmitted(true)
        setReelUrl('')
+       setLoading(false)
     }
 
     return (
@@ -85,7 +88,8 @@ export default function Home() {
                        placeholder='paste url here'/>
                 {error && <div className='text-red-500 text-xs'>The field cannot be empty</div>}
                 <button type='submit'
-                        className='transition-colors duration-100 ease-in-out text-center w-full py-3 bg-red-600  text-white rounded-lg hover:bg-gradient-to-b cursor-pointer mt-4 hover:from-red-400 via-red-500 to-red-600 text-sm font-semibold'>Submit
+                        className='transition-colors duration-100 ease-in-out text-center w-full py-3 bg-red-600  text-white rounded-lg hover:bg-gradient-to-b cursor-pointer mt-4 hover:from-red-400 via-red-500 to-red-600 text-sm font-semibold'>{loading ?                 <AiOutlineLoading3Quarters className='animate-spin text-white mx-auto text-lg mt-0.5'/> :
+                    'Submit'}
                 </button>
             </form>
 
