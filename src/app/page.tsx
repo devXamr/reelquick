@@ -96,7 +96,7 @@ export default function Home() {
                             className='px-5 py-2 cursor-pointer text-sm rounded-lg bg-black text-white'>Download Reel
                     </button>
                 </div>
-                <video controls width='100%' src={downloadUrl} className='w-[50%] mx-auto rounded-tr-xl'/>
+                <video controls width='100%' src={downloadUrl} className='w-[50%] mx-auto rounded-r-xl'/>
 
             </div>}
 
