@@ -72,8 +72,10 @@ export default function Home() {
     }
 
     return (
+        <div>
+
         <div className='font-primary py-20 max-w-[90%] lg:max-w-[25%] mx-auto'>
-            <Image className='w-1/2 mx-auto mb-3' src={logo} alt='reel quick logo' />
+            <Image className='w-1/2 mx-auto mb-3' src={logo} alt='reel quick logo'/>
             <div className='text-center text-red-500 text-3xl font-semibold'>Insta Reel Downloader</div>
             <div className='text-gray-600 text-sm text-center mt-2  mx-auto'>Download any instagram reel at command.
                 Paste a link and it will be ready for download, ReelQuick.
@@ -88,7 +90,8 @@ export default function Home() {
                        placeholder='paste url here'/>
                 {error && <div className='text-red-500 text-xs'>The field cannot be empty</div>}
                 <button type='submit'
-                        className='transition-colors duration-100 ease-in-out text-center w-full py-3 bg-red-600  text-white rounded-lg hover:bg-gradient-to-b cursor-pointer mt-4 hover:from-red-400 via-red-500 to-red-600 text-sm font-semibold'>{loading ?                 <AiOutlineLoading3Quarters className='animate-spin text-white mx-auto text-lg mt-0.5'/> :
+                        className='transition-colors duration-100 ease-in-out text-center w-full py-3 bg-red-600  text-white rounded-lg hover:bg-gradient-to-b cursor-pointer mt-4 hover:from-red-400 via-red-500 to-red-600 text-sm font-semibold'>{loading ?
+                    <AiOutlineLoading3Quarters className='animate-spin text-white mx-auto text-lg mt-0.5'/> :
                     'Submit'}
                 </button>
             </form>
@@ -110,11 +113,13 @@ export default function Home() {
             </div>}
 
 
-            <div className='text-xs text-gray-500 absolute bottom-2 lg:w-[25%] w-[95%] mx-auto inset-x-0'>This tool is for personal and educational use only.
-                We do not host any videos, and we do not own the content.
-                All rights belong to the original creators on Instagram™.</div>
-
-
         </div>
-    );
+    <div className='text-xs text-gray-500 lg:w-[25%] w-[95%] mx-auto inset-x-0 pb-2'>This tool is for personal
+        and educational use only.
+        We do not host any videos, and we do not own the content.
+        All rights belong to the original creators on Instagram™.</div>
+
+    </div>
+)
+    ;
 }
