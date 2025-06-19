@@ -45,13 +45,13 @@ export default function Home() {
 
         const options = {
             method: 'GET',
-            url: 'https://instagram-reels-downloader-api.p.rapidapi.com/download',
+            url: process.env.NEXT_PUBLIC_RAPID_API_URL,
             params: {
                 url: reelUrl
             },
             headers: {
-                'x-rapidapi-key': '4e789c6d92mshe5f2f3f5a604071p1aa04cjsnc7b7864208ba',
-                'x-rapidapi-host': 'instagram-reels-downloader-api.p.rapidapi.com'
+                'x-rapidapi-key': process.env.NEXT_PUBLIC_RAPID_API_KEY,
+                'x-rapidapi-host': process.env.NEXT_PUBLIC_RAPID_API_HOST
             }
         };
 
